@@ -1,0 +1,61 @@
+[
+  {
+    "username" : "customer_1",
+    "password" : "C1pass",
+    "role" : "customer"
+  },
+
+  {
+    "username" : "customer_2",
+    "password" : "qqH96f",
+    "role" : "customer"
+  },
+
+  {
+    "username" : "customer_3",
+    "password" : "6Tkdo8",
+    "role" : "customer"
+  },
+
+  {
+    "username" : "customer_4",
+    "password" : "pdJ8n8",
+    "role" : "customer"
+  },
+
+  {
+    "username" : "customer_5",
+    "password" : "p2o3MO",
+    "role" : "customer"
+  },
+
+  {
+    "username" : "customer_6",
+    "password" : "Q0nh8j",
+    "role" : "customer"
+  },
+
+  {
+    "username" : "admin_1",
+    "password" : "A1pass",
+    "role" : "admin"
+  },
+
+  {
+    "username" : "admin_2",
+    "password" : "a8jKM9",
+    "role" : "admin"
+  },
+
+  {
+    "username" : "admin_3",
+    "password" : "K23dg6",
+    "role" : "admin"
+  },
+
+  {
+    "username" : "admin_4",
+    "password" : "0Sj2Pi",
+    "role" : "admin"
+  }
+]
