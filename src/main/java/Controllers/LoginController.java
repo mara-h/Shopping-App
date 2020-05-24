@@ -1,6 +1,5 @@
 package Controllers;
 
-import Models.User;
 import Services.UserService;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -14,10 +13,19 @@ public class LoginController {
 
     @FXML
     public void userLoginButton(){
+        if(UserService.checkCredentials(usernameTextField.getText(),passwordField.getText()).equals("customer")){
+            //pagina shop
+        }else{
+            //invalid user
+        }
     }
 
     @FXML
     public void adminLoginButton(){
-
+        if(UserService.checkCredentials(usernameTextField.getText(),passwordField.getText()).equals("customer")){
+            //pagina shop
+        }else{
+            //invalid admin
+        }
     }
 }

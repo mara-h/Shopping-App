@@ -28,7 +28,11 @@ public class UserService {
         }
     }
 
-    public static ArrayList<User> getUsers() {
-        return users;
+    public static String checkCredentials(String i, String p){
+        for(User u:users) {
+            if (u.getUsername().equals(i) && u.getPassword().equals(p))
+                return u.getRole();
+        }
+        return null;
     }
 }
