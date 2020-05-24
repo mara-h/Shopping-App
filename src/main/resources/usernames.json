@@ -1,61 +1,61 @@
 [
   {
     "username" : "customer_1",
-    "password" : "C1pass",
+    "password" : "cGFzc3dvcmQx",
     "role" : "customer"
   },
 
   {
     "username" : "customer_2",
-    "password" : "qqH96f",
+    "password" : "cGFzc3dvcmQy",
     "role" : "customer"
   },
 
   {
     "username" : "customer_3",
-    "password" : "6Tkdo8",
+    "password" : "cGFzc3dvcmQz",
     "role" : "customer"
   },
 
   {
     "username" : "customer_4",
-    "password" : "pdJ8n8",
+    "password" : "cGFzc3dvcmQ0",
     "role" : "customer"
   },
 
   {
     "username" : "customer_5",
-    "password" : "p2o3MO",
+    "password" : "cGFzc3dvcmQ1",
     "role" : "customer"
   },
 
   {
     "username" : "customer_6",
-    "password" : "Q0nh8j",
+    "password" : "cGFzc3dvcmQ2",
     "role" : "customer"
   },
 
   {
     "username" : "admin_1",
-    "password" : "A1pass",
+    "password" : "cGFzczE=",
     "role" : "admin"
   },
 
   {
     "username" : "admin_2",
-    "password" : "a8jKM9",
+    "password" : "cGFzczI=",
     "role" : "admin"
   },
 
   {
     "username" : "admin_3",
-    "password" : "K23dg6",
+    "password" : "cGFzczM=",
     "role" : "admin"
   },
 
   {
     "username" : "admin_4",
-    "password" : "0Sj2Pi",
+    "password" : "cGFzczQ=",
     "role" : "admin"
   }
 ]

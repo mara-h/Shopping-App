@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.util.Objects;
+
 public class LoginController {
     @FXML
     private TextField usernameTextField;
@@ -16,9 +18,10 @@ public class LoginController {
     @FXML
     public void userLoginButton(){
         try {
-            if (UserService.checkCredentials(usernameTextField.getText(), passwordField.getText()).equals("customer")) {
+            if (UserService.checkCredentials(usernameTextField.getText(), UserService.encodePassword(passwordField.getText())).equals("customer")) {
                 //pagina shop
-            } else {
+            }
+            else {
                 throw new InvalidUser();
             }
         }catch (Exception e){
@@ -29,9 +32,10 @@ public class LoginController {
     @FXML
     public void adminLoginButton(){
         try{
-            if(UserService.checkCredentials(usernameTextField.getText(),passwordField.getText()).equals("customer")){
-                //pagina shop
-            }else{
+            if(UserService.checkCredentials(usernameTextField.getText(), UserService.encodePassword(passwordField.getText().toString())).equals("admin")){
+                //pagina admin
+            }
+            else{
                 throw new InvalidAdmin();
             }
         }catch (Exception e){

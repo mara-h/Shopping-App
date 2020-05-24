@@ -1,5 +1,6 @@
 package Services;
 
+import Exceptions.InvalidAdmin;
 import Models.User;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -7,6 +8,7 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Base64;
 
 public class UserService {
     private static ArrayList<User> users = new ArrayList<>();
@@ -33,6 +35,12 @@ public class UserService {
             if (u.getUsername().equals(i) && u.getPassword().equals(p))
                 return u.getRole();
         }
-        return null;
+        return "error";
+    }
+
+    public static String encodePassword(String password){
+        String result = Base64.getEncoder().encodeToString(password.getBytes());
+
+        return result;
     }
 }
