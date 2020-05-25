@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class ItemsController {
-    private ArrayList<Item> cartItems = new ArrayList<>();
+    private static ArrayList<Item> cartItems = new ArrayList<>();
     private String size;
 
     @FXML
@@ -57,15 +57,19 @@ public class ItemsController {
 
     @FXML
     public void placeOrderButton() {
-        cartItems = new ArrayList<>();
         try {
             Stage primaryStage = new Stage();
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("OrderPlaced.fxml"));
             primaryStage.setTitle("Order Placed");
-            primaryStage.setScene(new Scene(root,400,200));
+            primaryStage.setScene(new Scene(root,400,400));
             primaryStage.show();
         }catch (Exception e){
             System.out.println(e);
         }
+        cartItems = new ArrayList<>();
+    }
+
+    public static ArrayList<Item> getCartItems() {
+        return cartItems;
     }
 }
