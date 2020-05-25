@@ -8,9 +8,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
 public class SelectSizeController {
-    private String size;
+    private static String size = "36";
 
-    public String getSize() {
+    public static String getSize() {
         return size;
     }
 
@@ -39,5 +39,6 @@ public class SelectSizeController {
     @FXML
     public void okButton(){
         size = choiceBox.getValue().toString();
+        this.backButton();
     }
 }

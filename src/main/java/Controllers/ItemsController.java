@@ -15,8 +15,8 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class ItemsController {
-    private ArrayList<Item> cartItems = new ArrayList<>();//un size pasiv care se seteaza la add to cart
-    private String size;//un arraylist de alea selectate
+    private ArrayList<Item> cartItems = new ArrayList<>();
+    private String size;
 
     @FXML
     private TableView<Item> shoppingTable;
@@ -49,7 +49,8 @@ public class ItemsController {
 
     @FXML
     public void addToCartButton(){
-
+        size = SelectSizeController.getSize();
+        cartItems.add(new Item(shoppingTable.getSelectionModel().getSelectedItem().getName(),shoppingTable.getSelectionModel().getSelectedItem().getPrice(),size));
     }
 
     @FXML
