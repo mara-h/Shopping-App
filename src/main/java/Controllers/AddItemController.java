@@ -31,6 +31,5 @@ public class AddItemController {
     @FXML
     public void addButton(){
         ItemsService.addItem(new Item(itemTextField.getText(),Integer.parseInt(priceTextField.getText())));
-        ItemsService.writeItems();
     }
 }

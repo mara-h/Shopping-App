@@ -37,6 +37,20 @@ public class ItemsService {
 
     public static void addItem(Item i){
         items.add(i);
+        ItemsService.writeItems();
+    }
+
+    public static void removeItem(Item x){
+        Item a = null;
+
+        for(Item i:items){
+            if(i.equals(x)){
+                a=i;
+            }
+        }
+        items.remove(a);
+
+        ItemsService.writeItems();
     }
 
     public static void writeItems(){

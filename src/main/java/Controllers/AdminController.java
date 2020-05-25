@@ -55,4 +55,10 @@ public class AdminController {
             System.out.println(e);
         }
     }
+
+    @FXML
+    public void deleteButton(){
+        ItemsService.removeItem(itemsTable.getSelectionModel().getSelectedItem());
+        this.initialize();
+    }
 }
