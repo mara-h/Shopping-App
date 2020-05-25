@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SelectSizeController">
+   <children>
+      <Label layoutX="131.0" layoutY="142.0" text="Size: " />
+      <ChoiceBox fx:id="choiceBox" layoutX="176.0" layoutY="138.0" prefWidth="150.0" />
+      <Button layoutX="235.0" layoutY="200.0" mnemonicParsing="false" onAction="#okButton" text="OK" />
+      <Button layoutX="41.0" layoutY="26.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>
