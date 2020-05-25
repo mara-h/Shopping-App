@@ -7,12 +7,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class ItemsController {
     private ArrayList<Item> cartItems = new ArrayList<>();
@@ -54,7 +56,16 @@ public class ItemsController {
     }
 
     @FXML
-    public void placeOrderButton(){
-
+    public void placeOrderButton() {
+        cartItems = new ArrayList<>();
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("OrderPlaced.fxml"));
+            primaryStage.setTitle("Order Placed");
+            primaryStage.setScene(new Scene(root,400,200));
+            primaryStage.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 }
