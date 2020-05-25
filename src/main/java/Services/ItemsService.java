@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class ItemsService {
@@ -32,5 +33,37 @@ public class ItemsService {
 
     public static ArrayList<Item> getItems() {
         return items;
+    }
+
+    public static void addItem(Item i){
+        items.add(i);
+    }
+
+    public static void writeItems(){
+        FileWriter fw = null;
+        try{
+            fw = new FileWriter("src/main/resources/shoppingItems.json");
+            JSONArray ja = new JSONArray();
+
+            for(Item i:items){
+                JSONObject jo = new JSONObject();
+                jo.put("item",i.getName());
+                jo.put("price",String.valueOf(i.getPrice()));
+
+                ja.add(jo);
+            }
+
+            fw.write(ja.toJSONString());
+
+        }catch (Exception e){
+            System.out.println(e);
+        }finally {
+            try {
+                fw.flush();
+                fw.close();
+            }catch (Exception e){
+                System.out.println();
+            }
+        }
     }
 }

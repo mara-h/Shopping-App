@@ -41,7 +41,11 @@ public class LoginController {
     public void adminLoginButton(){
         try{
             if(UserService.checkCredentials(usernameTextField.getText(), UserService.encodePassword(passwordField.getText().toString())).equals("admin")){
-                //pagina admin
+                Stage primaryStage = (Stage)usernameTextField.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("StoreManagement.fxml"));
+                primaryStage.setTitle("Administration Page");
+                primaryStage.setScene(new Scene(root,600,600));
+                primaryStage.show();
             }
             else{
                 throw new InvalidAdmin();
