@@ -17,7 +17,7 @@
       </Label>
       <Button layoutX="110.0" layoutY="311.0" mnemonicParsing="false" onAction="#addButton" text="Add" textFill="#5b3ebb" />
       <Button layoutX="219.0" layoutY="311.0" mnemonicParsing="false" text="Edit" textFill="#5b3ebb" />
-      <Button layoutX="312.0" layoutY="311.0" mnemonicParsing="false" text="Delete" textFill="#5b3ebb" />
+      <Button layoutX="312.0" layoutY="311.0" mnemonicParsing="false" onAction="#deleteButton" text="Delete" textFill="#5b3ebb" />
       <Button layoutX="421.0" layoutY="311.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#5b3ebb" />
       <TableView fx:id="itemsTable" layoutX="110.0" layoutY="100.0" prefHeight="200.0" prefWidth="352.0">
         <columns>
