@@ -29,8 +29,6 @@ public class ItemsController {
 
     @FXML
     public void initialize(){
-        ItemsService.loadItems();
-
         shoppingTable.setItems(FXCollections.observableArrayList(ItemsService.getItems()));
         itemColumn.setCellValueFactory(new PropertyValueFactory<Item,String>("name"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Item,Integer>("price"));
