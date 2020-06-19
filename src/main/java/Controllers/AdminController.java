@@ -61,4 +61,17 @@ public class AdminController {
         ItemsService.removeItem(itemsTable.getSelectionModel().getSelectedItem());
         this.initialize();
     }
+
+    @FXML
+    public void editButton(){
+        try{
+            Stage primaryStage = (Stage)itemsTable.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("EditItem.fxml"));
+            primaryStage.setTitle("Edit Item");
+            primaryStage.setScene(new Scene(root,600,600));
+            primaryStage.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
 }
