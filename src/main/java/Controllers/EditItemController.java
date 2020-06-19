@@ -1,5 +1,6 @@
 package Controllers;
 
+import Services.ItemsService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +14,11 @@ public class EditItemController {
     private Label label;
     @FXML
     private TextField textField;
+
+    @FXML
+    public void initialize(){
+        label.setText(String.valueOf(AdminController.getSelected().getPrice()));
+    }
 
     @FXML
     public void backButton(){
@@ -29,6 +35,9 @@ public class EditItemController {
 
     @FXML
     public void okButton(){
+        AdminController.getSelected().setPrice(Integer.parseInt(textField.getText()));
+        ItemsService.writeItems();
 
+        this.initialize();
     }
 }

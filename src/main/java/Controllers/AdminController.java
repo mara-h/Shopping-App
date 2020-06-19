@@ -14,6 +14,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class AdminController {
+    private static Item selected;
+
     @FXML
     private TableView<Item> itemsTable;
     @FXML
@@ -64,6 +66,8 @@ public class AdminController {
 
     @FXML
     public void editButton(){
+        selected = itemsTable.getSelectionModel().getSelectedItem();
+
         try{
             Stage primaryStage = (Stage)itemsTable.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("EditItem.fxml"));
@@ -73,5 +77,9 @@ public class AdminController {
         }catch (Exception e){
             System.out.println(e);
         }
+    }
+
+    public static Item getSelected() {
+        return selected;
     }
 }
