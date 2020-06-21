@@ -17,11 +17,11 @@ public class AdminController {
     private static Item selected;
 
     @FXML
-    private TableView<Item> itemsTable;
+    TableView<Item> itemsTable;
     @FXML
-    private TableColumn<Item,String> itemColumn;
+    TableColumn<Item,String> itemColumn;
     @FXML
-    private TableColumn<Item,Integer> priceColumn;
+    TableColumn<Item,Integer> priceColumn;
 
     @FXML
     public void initialize(){
@@ -81,5 +81,9 @@ public class AdminController {
 
     public static Item getSelected() {
         return selected;
+    }
+
+    public static void setSelected(Item selected) {
+        AdminController.selected = selected;
     }
 }

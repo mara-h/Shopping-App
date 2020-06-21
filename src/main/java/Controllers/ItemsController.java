@@ -21,11 +21,11 @@ public class ItemsController {
     private String size;
 
     @FXML
-    private TableView<Item> shoppingTable;
+    TableView<Item> shoppingTable;
     @FXML
-    private TableColumn<Item,String> itemColumn;
+    TableColumn<Item,String> itemColumn;
     @FXML
-    private TableColumn<Item,Integer> priceColumn;
+    TableColumn<Item,Integer> priceColumn;
 
     @FXML
     public void initialize(){
@@ -34,6 +34,19 @@ public class ItemsController {
         shoppingTable.setItems(FXCollections.observableArrayList(ItemsService.getItems()));
         itemColumn.setCellValueFactory(new PropertyValueFactory<Item,String>("name"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Item,Integer>("price"));
+    }
+
+    @FXML
+    public void backButton(){
+        try{
+            Stage primaryStage = (Stage)shoppingTable.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Login.fxml"));
+            primaryStage.setTitle("Login");
+            primaryStage.setScene(new Scene(root,600,600));
+            primaryStage.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     @FXML
