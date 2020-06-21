@@ -19,7 +19,7 @@ public class SelectSizeController {
     }
 
     @FXML
-    private ChoiceBox choiceBox;
+    ChoiceBox choiceBox;
 
     @FXML
     public void initialize(){
