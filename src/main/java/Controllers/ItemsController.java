@@ -37,6 +37,19 @@ public class ItemsController {
     }
 
     @FXML
+    public void backButton(){
+        try{
+            Stage primaryStage = (Stage)shoppingTable.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Login.fxml"));
+            primaryStage.setTitle("Login");
+            primaryStage.setScene(new Scene(root,600,600));
+            primaryStage.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+
+    @FXML
     public void selectSizeButton(){
         try{
             Stage primaryStage = (Stage)shoppingTable.getScene().getWindow();
