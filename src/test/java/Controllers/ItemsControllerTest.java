@@ -30,4 +30,13 @@ public class ItemsControllerTest extends ApplicationTest {
 
         assertEquals(1, ItemsController.getCartItems().size());
     }
+
+    @Test
+    public void placeOrder(){
+        ItemsController.getCartItems().add(new Item("name",10));
+
+        controller.placeOrderButton();
+
+        assertEquals(0,ItemsController.getCartItems().size());
+    }
 }
