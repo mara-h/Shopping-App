@@ -21,11 +21,11 @@ public class ItemsController {
     private String size;
 
     @FXML
-    private TableView<Item> shoppingTable;
+    TableView<Item> shoppingTable;
     @FXML
-    private TableColumn<Item,String> itemColumn;
+    TableColumn<Item,String> itemColumn;
     @FXML
-    private TableColumn<Item,Integer> priceColumn;
+    TableColumn<Item,Integer> priceColumn;
 
     @FXML
     public void initialize(){

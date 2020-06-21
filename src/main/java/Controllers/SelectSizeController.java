@@ -14,6 +14,10 @@ public class SelectSizeController {
         return size;
     }
 
+    public static void setSize(String size) {
+        SelectSizeController.size = size;
+    }
+
     @FXML
     private ChoiceBox choiceBox;
 
