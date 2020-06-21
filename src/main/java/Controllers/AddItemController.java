@@ -11,9 +11,9 @@ import javafx.stage.Stage;
 
 public class AddItemController {
     @FXML
-    private TextField itemTextField;
+    TextField itemTextField;
     @FXML
-    private TextField priceTextField;
+    TextField priceTextField;
 
     @FXML
     public void backButton(){

@@ -14,6 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        ItemsService.setPath("src/main/resources/shoppingItems.json");
         UserService.loadUsers();
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Login.fxml"));
