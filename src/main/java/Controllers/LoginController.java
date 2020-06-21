@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -15,9 +16,16 @@ import java.util.Objects;
 
 public class LoginController {
     @FXML
-    private TextField usernameTextField;
+    TextField usernameTextField;
     @FXML
-    private PasswordField passwordField;
+    PasswordField passwordField;
+    @FXML
+    Label label;
+
+    @FXML
+    public void initialize(){
+        label.setText("");
+    }
 
     @FXML
     public void userLoginButton(){
@@ -33,7 +41,7 @@ public class LoginController {
                 throw new InvalidUser();
             }
         }catch (Exception e){
-            System.out.println(e);
+            label.setText("Invalid user!");
         }
     }
 
@@ -51,7 +59,7 @@ public class LoginController {
                 throw new InvalidAdmin();
             }
         }catch (Exception e){
-            System.out.println(e);
+            label.setText("Invalid user!");
         }
     }
 }
