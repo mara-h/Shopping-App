@@ -82,4 +82,8 @@ public class AdminController {
     public static Item getSelected() {
         return selected;
     }
+
+    public static void setSelected(Item selected) {
+        AdminController.selected = selected;
+    }
 }

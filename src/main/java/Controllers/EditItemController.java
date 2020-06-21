@@ -11,9 +11,9 @@ import javafx.stage.Stage;
 
 public class EditItemController {
     @FXML
-    private Label label;
+    Label label;
     @FXML
-    private TextField textField;
+    TextField textField;
 
     @FXML
     public void initialize(){
