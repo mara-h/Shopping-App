@@ -43,4 +43,8 @@ public class UserService {
 
         return result;
     }
+
+    public static ArrayList<User> getUsers() {
+        return users;
+    }
 }
